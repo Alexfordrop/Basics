@@ -7,3 +7,4 @@ def total(initial=5, *numbers, extra_numbers):
 
 total(10, 1, 2, 3, extra_numbers=50)
 total(10, 1, 2, 3)
+# Результат с ошибкой
