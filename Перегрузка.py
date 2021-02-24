@@ -2,10 +2,10 @@ class Number:
     def __init__(self, value):
         self.value = value
 
-    def __It__(self, other):
+    def __lt__(self, other):
         return self.value < other.value
 
-    def __Ie__(self, other):
+    def __le__(self, other):
         return self.value <= other.value
 
     def __eq__(self, other):
