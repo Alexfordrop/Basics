@@ -1,3 +1,5 @@
-d = {0: 'a', 1: 'b', 2: 'c'}
-for i in d:
-    print(i)
+d = ['sf', 'teg', 'qwert', 'er', 'xvb']
+while d:
+    print(d.pop())
+else:
+    print('1234')
