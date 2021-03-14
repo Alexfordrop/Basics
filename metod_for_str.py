@@ -26,6 +26,25 @@ print(str1.replace(' ', ''))
 str1_array = str1.split(' ')
 print(str1_array)
 
-str2 = '01.jpg#02.jpg#tryyr#jpg.jpg#567.jpg'
+str2 = '01.jpg#02.jpg#tryyr.jpg#578.jpg#000.jpg#567.jpg'
 str2_array = str2.split('#')
 print(str2_array)
+
+imgs_array = ['01.jpg', '02.jpg', 'tryyr.jpg', '578.jpg', '000.jpg', '567.jpg']
+imgs_str = '---'.join(imgs_array)
+print(imgs_str)
+
+# маленькие символы и большие
+str4 = 'Привет, как у тебя дела?'
+print(str4.lower())
+print(str4.upper())
+
+print(str4.count('т')) # количество определённых символов
+print(len(str4)) # длина строки
+
+print(str4.isalpha())
+str5 = 'dgfgh'
+print(str5.isalpha())
+print(str4.isdigit())
+str6 = '67'
+print(str6.isdigit())
