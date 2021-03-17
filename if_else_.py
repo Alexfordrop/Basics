@@ -1,5 +1,26 @@
+f = '10'
+if f == str(10):
+    print('f == 10')
+
+h = 10
+if h == int('10'):
+    print('h == 10')
+
+j = '2.53'
+print(float(j) + 7.5)
+if float(j) + 7.5 > 10:
+    print('Это больше 10')
+
+
 print('Введите ваш возраст')
 age = int(input())
+
+if age == 5:
+    print('5')
+elif age == 6:
+    print('6')
+elif age == 7:
+    print('7')
 
 if age < 100:
     print('Возраст меньше 100')
