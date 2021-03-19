@@ -1,7 +1,7 @@
 ii = 0
 array_y = [1, 2, 3, 9, 8, 7, 0]
 while ii < 7:
-    print("array_y(',ii,') : ", array_y(ii))
+    print("array_y[",ii,"] : ", array_y[ii])
     ii = ii + 1
 
 print("---------")
