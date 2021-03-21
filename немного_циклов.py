@@ -17,3 +17,7 @@ stolen_coins = 2
 coins = found_coins
 
 print(found_coins + 365 * (magic_coins - stolen_coins))
+
+for i in range(0,  365):
+    coins = coins + magic_coins - stolen_coins
+    print("День %s Стало монет %s" % (i, coins))
