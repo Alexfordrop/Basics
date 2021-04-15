@@ -1,6 +1,8 @@
-def mul(a, b):
-    print(a + b)
-if __name__ == '__main__':
-    a = int(input())
-    b = int(input())
-    mul(a, b)
+'''a = int(input())
+b = int(input())
+c = int(input())
+try 
+print(b + c)'''
+
+a = 3
+a
