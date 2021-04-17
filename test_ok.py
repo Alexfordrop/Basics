@@ -1,8 +1,3 @@
-'''a = int(input())
-b = int(input())
-c = int(input())
-try 
-print(b + c)'''
-
-a = 3
-a
+a = True
+b = False
+print(a and b or not a and not b)
