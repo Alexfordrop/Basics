@@ -1,7 +1,7 @@
 # исходный список чисел
 numbers = [1, 2, 3, 4, 5]
 
-# через цикл for
+# через цикл for, этого лучше избегать
 squares = []
 for num in numbers:
     squares.append(num * num)
