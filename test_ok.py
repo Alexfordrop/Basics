@@ -1,7 +1,27 @@
-'''year = int(input())
-if not year % 100 == 0 and year % 4 == 0 or year % 400 == 0:
-    print('Високосный')
-else:
-    print('Обычный')'''
+a = float(input())
+b = float(input())
+c = input()
 
-print("239" > "30" and 239 > 30)
+
+if c == "+":
+    print(a + b)
+elif c == "-":
+    print(a - b)
+elif c == "*":
+    print(a * b)
+elif c == "/" and b == 0:
+    print('Деление на 0!')
+elif c == "/":
+    print(a / b)
+elif c == "pow":
+    print(a ** b)
+elif c == "mod" and b == 0:
+    print('Деление на 0!')
+elif c == "mod":
+    print(a % b)
+elif c == "div" and b == 0:
+    print('Деление на 0!')
+elif c == "div":
+    print(a // b)
+else:
+    print('Ты что ввёл, Бармалей!!!')
