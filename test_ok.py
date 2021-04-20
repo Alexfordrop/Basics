@@ -1,27 +1,6 @@
-a = float(input())
-b = float(input())
-c = input()
-
-
-if c == "+":
-    print(a + b)
-elif c == "-":
-    print(a - b)
-elif c == "*":
-    print(a * b)
-elif c == "/" and b == 0:
-    print('Деление на 0!')
-elif c == "/":
-    print(a / b)
-elif c == "pow":
-    print(a ** b)
-elif c == "mod" and b == 0:
-    print('Деление на 0!')
-elif c == "mod":
-    print(a % b)
-elif c == "div" and b == 0:
-    print('Деление на 0!')
-elif c == "div":
-    print(a // b)
+a, b, c, d, e, f = input()
+if int(a) + int(b) + int(c) == int(d) + int(e) + int(f):
+    print('Счастливый')
 else:
-    print('Ты что ввёл, Бармалей!!!')
+    print('Обычный')
+print(a)
