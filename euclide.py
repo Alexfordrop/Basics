@@ -18,7 +18,7 @@ test_data = {
 for pair in test_data:
     a, b = pair
     answer = Euclidean_algoritm(a, b)
-print('НОД({0},{1}) - {2} : {3}'. format(pair[0],
+print('НОД({0}, {1}) - {2} : {3}'. format(pair[0],
                         pair[1],
                         answer,
                         answer == test_data[pair]))

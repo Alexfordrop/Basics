@@ -1,6 +1,9 @@
-a, b, c, d, e, f = input()
-if int(a) + int(b) + int(c) == int(d) + int(e) + int(f):
-    print('Счастливый')
-else:
-    print('Обычный')
-print(a)
+i = 0
+s = 0
+while i < 10:
+    i = i + 1
+    s = s + i
+    if s > 15:
+        continue
+    i = i + 1
+print(i)
