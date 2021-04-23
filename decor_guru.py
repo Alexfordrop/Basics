@@ -37,3 +37,54 @@ class Decorator(Component):
         '''
 
         return self._component
+    
+    def operation(self) -> str:
+        return self._component.operation()
+
+class ConcreteDecoratorA(Decorator):
+    '''
+    Конкретные Декораторы вызывают обёрнутый объект и изменяют его результат
+    некоторым образом.
+    '''
+
+    def operation(self) -> str:
+        '''
+        Декораторы могут вызывать родительскую реализацию операции, вместо того,
+        чтобы вызвать обёрнутый объект напрямую. Такой подход упрощает
+        расширение классов декораторов.
+        '''
+        return f"ConcreteDecoratorA({self.component.operation()})"
+
+class ConcreteDecoratorB(Decorator):
+    '''
+    Декораторы могут выполнять своё поведение до или после вызова обёрнутого
+    объекта.
+    '''
+
+    def operation(self) -> str:
+        return f"ConcreteDecoratorB({self.component.operation()})"
+
+def client_code(component: Component) -> None:
+    '''
+    Клиентский код работает со всеми объектами, используя интерфейс Компонента.
+    Таким образом, он остаётся независимым от конкретных классов компонентов, с
+    которыми работает
+    '''
+
+    print(f"RESULT: {component.operation()}", end="")
+
+if __name__ == "__main__":
+    # Таким образом, клиентский код может поддерживать как простые компоненты...
+    simple = ConcreteComponent()
+    print("Client: I've got a simple component:")
+    client_code(simple)
+    print("\n")
+
+    # ...так и декорированные.
+    #
+    # декораторы могут обёртывать не только простые
+    # компоненты, но и другие декораторы.
+    decorator1 = ConcreteDecoratorA(simple)
+    decorator2 = ConcreteDecoratorB(decorator1)
+    print("Client: Now I've got a decorated component:")
+    client_code(decorator2)
