@@ -37,8 +37,41 @@ class AlphabeticalOrderIterator(Iterator):
         '''
         try:
             value = self._collection[self._position]
-            self._position += -1 self._reverse else 1
+            self._position += -1 if self._reverse else 1
         except IndexError:
             raise StopIteration()
 
         return value
+
+class WordsCollection(Iterable):
+    '''
+    Конкретные Коллекции предоставляют один или несколько методов для получения
+    новых экземпляров итератора, совместимых с классом коллекции.
+    '''
+    def __init__(self, collection: List[Any] = []) -> None:
+        self._collection = collection
+
+    def __iter__(self) -> AlphabeticalOrderIterator:
+        '''
+        Метод __iter__() возвращает объект итератора, по умолчанию мы возвращаем
+        итератор с сортировкой по возрастанию.
+        '''
+        return AlphabeticalOrderIterator(self._collection)
+
+    def get_reverse_iterator(self) -> AlphabeticalOrderIterator:
+        return AlphabeticalOrderIterator(self._collection, True)
+
+    def add_item(self, item: Any):
+        self._collection.append(item)
+
+if __name__ == '__main__':
+    # Клиентский код может знать или не знать о Конкретном Итераторе или классах
+    # Коллекций, в зависимости от уровня косвенности, который вы хотите
+    # сохранить в своей программе.
+    collection = WordsCollection()
+    collection.add_item('First')
+    collection.add_item('Second')
+    collection.add_item('Third')
+
+    print('Straight travrsal:')
+    print('\n'.join(collection.get_reverse_iterator()), end='')
