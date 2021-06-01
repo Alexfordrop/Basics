@@ -5,3 +5,6 @@ for i in daily:
 
   if i != 0:
     return True
+
+def things(number, time)
+  pass
