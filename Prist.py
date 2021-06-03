@@ -22,3 +22,16 @@ for i in range(len(s)):
     anscnt = nowcnt
     
 print(ans)
+
+if a == 0:
+  if b != 0:
+    print(-c / b)
+  if b == 0 and c == 0:
+    print('Infinite number of sulitions')
+else:
+  d = b ** 2 - 4 * a * c
+  print(sqrt(d))
+  if d == 0:
+    x1 = -b / (2 * a)
+    print(x1)
+  elif:
