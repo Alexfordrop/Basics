@@ -7,7 +7,7 @@ def maxvisitosonline(n, tin, tout):
     online = 0
     maxonline = 0
     for event in events:
-        if event[l] == -1:
+        if event[1] == -1:
             online += 1
         else:
             online -= 1
